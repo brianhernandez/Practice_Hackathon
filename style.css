@@ -1,0 +1,10 @@
+/** General Styles **/
+
+body {
+	margin: .7em;
+}
+
+h1 + p {
+	color: darkgrey;
+	font-style: italic;
+}
