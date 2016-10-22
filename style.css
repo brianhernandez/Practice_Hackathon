@@ -31,7 +31,7 @@ input[type="radio"] {
 	overflow: hidden;
 	transition: all .5s ease;
 	padding: 0;
-	border-top: none;
+	border-top: 0px solid black;
 }
 
 #accord_first:checked + li {
@@ -47,7 +47,7 @@ input[type="radio"] {
 	overflow: hidden;
 	transition: all .5s ease;
 	padding: 0;
-	border-top: none;
+	border-top: 0px solid black;
 }
 
 #accord_second:checked + li {
@@ -63,7 +63,7 @@ input[type="radio"] {
 	overflow: hidden;
 	transition: all .5s ease;
 	padding: 0;
-	border-top: none;
+	border-top: 0px solid black;
 }
 
 #accord_third:checked + li {
@@ -79,7 +79,7 @@ input[type="radio"] {
 	overflow: hidden;
 	transition: all .5s ease;
 	padding: 0;
-	border-top: none;
+	border-top: 0px solid black;
 	border-bottom: 1px solid black;
 }
 
