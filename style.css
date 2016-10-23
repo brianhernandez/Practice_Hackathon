@@ -11,7 +11,10 @@ h1 + p {
 
 /** Collapsible Styles **/
 
-input[type="radio"] {
+#accord_first[type="radio"],
+#accord_second[type="radio"],
+#accord_third[type="radio"],
+#accord_fourth[type="radio"] {
 	display: none;
 }
 
