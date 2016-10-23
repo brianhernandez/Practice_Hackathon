@@ -167,3 +167,39 @@ h1 + p {
     transition: all .8s ease;
     box-shadow: 0px 0px 2px 2px #ccc;
 }
+
+/** ScrollSpy **/
+
+.scrollspy {
+	border: 1px solid black;
+	/*display: inline-block;*/
+	max-width: 60%;
+	padding-left: 0;
+	margin-bottom: 0;
+	box-sizing: border-box;
+	background-color: #E8E8E8;
+}
+
+.scrollspy li {
+	display: inline-block;
+}
+
+.scrollspy li a {
+	display: inline-block;
+	padding: 1em;
+	text-decoration: none;
+}
+
+.scrollspy li a:hover,
+.scrollspy li a:focus {
+	background-color: lightgrey;
+}
+
+.scrollspy_container {
+	/*background-color: tomato;*/
+	max-width: 60%;
+	max-height: 20em;
+	overflow: scroll;
+	padding: 0 .7em;
+	box-sizing: border-box;
+}
