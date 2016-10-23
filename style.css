@@ -32,64 +32,102 @@ h1 + p {
 #accord_first + li {
 	height: 0;
 	overflow: hidden;
-	transition: all .5s ease;
+	transition: all .7s ease;
 	padding: 0;
 	border-top: 0px solid black;
 }
 
+#accord_first + li > p {
+	font-size: 0;
+	opacity: 0;
+	transition: all .7s ease;
+}
+
 #accord_first:checked + li {
-	/*background-color: red;*/
 	height: 100%;
 	padding: 1em;
 	border-top: 1px solid black;
-	transition: all .5s ease;
+	transition: all .7s ease;
+}
+
+#accord_first:checked + li > p {
+	font-size: initial;
+	opacity: 1;
+	transition: font-size .7s ease;
 }
 
 #accord_second + li {
 	height: 0;
 	overflow: hidden;
-	transition: all .5s ease;
+	transition: all .7s ease;
 	padding: 0;
 	border-top: 0px solid black;
 }
 
+#accord_second + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
 #accord_second:checked + li {
-	/*background-color: blue;*/
 	height: 100%;
 	padding: 1em;
 	border-top: 1px solid black;
-	transition: all .5s ease;
+	transition: all .7s ease;
+}
+
+#accord_second:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
 }
 
 #accord_third + li {
 	height: 0;
 	overflow: hidden;
-	transition: all .5s ease;
+	transition: all .7s ease;
 	padding: 0;
 	border-top: 0px solid black;
 }
 
+#accord_third + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
 #accord_third:checked + li {
-	/*background-color: blue;*/
 	height: 100%;
 	padding: 1em;
 	border-top: 1px solid black;
-	transition: all .5s ease;
+	transition: all .7s ease;
+}
+
+#accord_third:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
 }
 
 #accord_fourth + li {
 	height: 0;
 	overflow: hidden;
-	transition: all .5s ease;
+	transition: all .7s ease;
 	padding: 0;
 	border-top: 0px solid black;
 	border-bottom: 1px solid black;
 }
 
+#accord_fourth + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
 #accord_fourth:checked + li {
-	/*background-color: blue;*/
 	height: 100%;
 	padding: 1em;
 	border-top: 1px solid black;
-	transition: all .5s ease;
+	transition: all .7s ease;
+}
+
+#accord_fourth:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
 }
