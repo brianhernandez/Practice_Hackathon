@@ -1,0 +1,248 @@
+/** General Styles **/
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	margin: .7em;
+}
+
+h1 + p {
+	color: darkgrey;
+	font-style: italic;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+/** Collapsible Styles **/
+
+#accord_first[type="radio"],
+#accord_second[type="radio"],
+#accord_third[type="radio"],
+#accord_fourth[type="radio"] {
+	display: none;
+}
+
+.accordion {
+	list-style: none;
+	max-width: 24em;
+}
+
+.accordion li {
+	border: 1px solid black;
+	border-bottom: none;
+	padding: 1em;
+}
+
+#accord_first + li {
+	height: 0;
+	overflow: hidden;
+	transition: all .7s ease;
+	padding: 0;
+	border-top: 0px solid black;
+}
+
+#accord_first + li > p {
+	font-size: 0;
+	opacity: 0;
+	transition: all .7s ease;
+}
+
+#accord_first:checked + li {
+	height: 100%;
+	padding: 1em;
+	border-top: 1px solid black;
+	transition: all .7s ease;
+}
+
+#accord_first:checked + li > p {
+	font-size: initial;
+	opacity: 1;
+	transition: font-size .7s ease;
+}
+
+#accord_second + li {
+	height: 0;
+	overflow: hidden;
+	transition: all .7s ease;
+	padding: 0;
+	border-top: 0px solid black;
+}
+
+#accord_second + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
+#accord_second:checked + li {
+	height: 100%;
+	padding: 1em;
+	border-top: 1px solid black;
+	transition: all .7s ease;
+}
+
+#accord_second:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
+}
+
+#accord_third + li {
+	height: 0;
+	overflow: hidden;
+	transition: all .7s ease;
+	padding: 0;
+	border-top: 0px solid black;
+}
+
+#accord_third + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
+#accord_third:checked + li {
+	height: 100%;
+	padding: 1em;
+	border-top: 1px solid black;
+	transition: all .7s ease;
+}
+
+#accord_third:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
+}
+
+#accord_fourth + li {
+	height: 0;
+	overflow: hidden;
+	transition: all .7s ease;
+	padding: 0;
+	border-top: 0px solid black;
+	border-bottom: 1px solid black;
+}
+
+#accord_fourth + li > p {
+	font-size: 0;
+	transition: all .7s ease;
+}
+
+#accord_fourth:checked + li {
+	height: 100%;
+	padding: 1em;
+	border-top: 1px solid black;
+	transition: all .7s ease;
+}
+
+#accord_fourth:checked + li > p {
+	font-size: initial;
+	transition: all .7s ease;
+}
+
+
+/* Dropdown */
+.btn {
+	text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    padding: 1em;
+    transition: .2s ease-out;
+    cursor: pointer;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: block;
+    width: 150px;
+}
+
+.dropdown-menu-content li {
+	list-style: none;
+	padding: 10px;
+}
+
+.dropdown-menu-content {
+	position: absolute;
+	width: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .5s;
+    margin: 0;
+    padding: 0;
+    top: -10px;
+    left: 0;
+    color: #26a69a
+}
+
+#dropdown-button:focus{
+	outline: none;
+}
+
+#dropdown-button:focus + .dropdown-menu-content {
+	opacity: 1;
+    visibility: visible;
+    width: 100%;
+    background: #ffffff;
+    color: #26a69a;
+    text-align: center;
+    transition: all .4s ease;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    transform: translateY(10px);
+}
+
+/** ScrollSpy **/
+
+.scrollspy {
+	border: 1px solid black;
+	/*display: inline-block;*/
+	max-width: 60%;
+	padding-left: 0;
+	margin-bottom: 0;
+	box-sizing: border-box;
+	background-color: #E8E8E8;
+}
+
+.scrollspy li {
+	display: inline-block;
+}
+
+.scrollspy li a {
+	display: inline-block;
+	padding: 1em;
+	text-decoration: none;
+}
+
+.scrollspy li a:hover,
+.scrollspy li a:focus {
+	background-color: lightgrey;
+}
+
+.scrollspy .activeTab {
+	background-color: lightgrey;
+}
+
+#scrollspy_container {
+	/*background-color: tomato;*/
+	max-width: 60%;
+	max-height: 20em;
+	overflow: scroll;
+	padding: 0 .7em;
+	box-sizing: border-box;
+}
