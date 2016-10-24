@@ -5,22 +5,39 @@ var blueEntry = document.getElementById('blue');
 var greenEntry = document.getElementById('green');
 var yellowEntry = document.getElementById('yellow');
 var redTab = document.getElementById('redTab');
-// var navBarPosition = document.getElementsByClassName('scrollspy');
+var blueTab = document.getElementById('blueTab');
+var greenTab = document.getElementById('greenTab');
+var yellowTab = document.getElementById('yellowTab');
+var scrollSpyDiv = document.getElementById('scrollspy_container');
 
-// console.log(redEntryPosition.offsetLeft);
-// console.log(blueEntryPosition.offsetLeft);
-// console.log(greenEntryPosition.offsetLeft);
-// console.log(yellowEntryPosition.offsetLeft);
+scrollSpyDiv.addEventListener('scroll', function() {
+	var currentActiveTab = document.querySelector('.activeTab');
 
-console.log(redEntry.getBoundingClientRect());
-console.log(blueEntry.getBoundingClientRect());
-console.log(greenEntry.getBoundingClientRect());
-console.log(yellowEntry.getBoundingClientRect());
-console.log(redTab.getBoundingClientRect());
-// console.log(navBarPosition.getBoundingClientRect());
+	if (Math.abs(redEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom) <= 7) {
+		if (currentActiveTab !== null) {
+			currentActiveTab.classList.remove('activeTab');
+		}
+		redTab.classList.add('activeTab');
+	}
 
-console.log(blueEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom);
+	if (Math.abs(blueEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom) <= 7) {
+		if (currentActiveTab !== null) {
+			currentActiveTab.classList.remove('activeTab');
+		}
+		blueTab.classList.add('activeTab');
+	}
 
-while ( blueEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom <= 5 ) {
-	
-}
+	if (Math.abs(greenEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom) <= 7) {
+		if (currentActiveTab !== null) {
+			currentActiveTab.classList.remove('activeTab');
+		}
+		greenTab.classList.add('activeTab');
+	}
+
+	if (Math.abs(yellowEntry.getBoundingClientRect().top - redTab.getBoundingClientRect().bottom) <= 7) {
+		if (currentActiveTab !== null) {
+			currentActiveTab.classList.remove('activeTab');
+		}
+		yellowTab.classList.add('activeTab');
+	}
+});
