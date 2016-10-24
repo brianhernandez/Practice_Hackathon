@@ -1,5 +1,10 @@
 /** General Styles **/
 
+* {
+	box-sizing: border-box;
+}
+
+
 body {
 	margin: .7em;
 }
@@ -8,6 +13,20 @@ h1 + p {
 	color: darkgrey;
 	font-style: italic;
 }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
 /** Collapsible Styles **/
 
@@ -134,25 +153,42 @@ h1 + p {
 
 
 /* Dropdown */
+.btn {
+	text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    padding: 1em;
+    transition: .2s ease-out;
+    cursor: pointer;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .dropdown-menu {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: 150px;
 }
 
 .dropdown-menu-content li {
 	list-style: none;
+	padding: 10px;
 }
 
 .dropdown-menu-content {
 	position: absolute;
+	width: 100%;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
     transition: visibility .5s;
     margin: 0;
     padding: 0;
-    top: 0;
+    top: -10px;
     left: 0;
+    color: #26a69a
 }
 
 #dropdown-button:focus{
@@ -162,8 +198,11 @@ h1 + p {
 #dropdown-button:focus + .dropdown-menu-content {
 	opacity: 1;
     visibility: visible;
-    width: 150px;
-    background: white;
-    transition: all .8s ease;
+    width: 100%;
+    background: #ffffff;
+    color: #26a69a;
+    text-align: center;
+    transition: all .4s ease;
     box-shadow: 0px 0px 2px 2px #ccc;
+    transform: translateY(10px);
 }
